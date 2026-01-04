@@ -9,7 +9,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class B0rain extends JavaPlugin {
-    public static final String PREFIX = "\u001B[37m[\u001B[90mB0rain\u001B[37m]\u001B[0m ";
+    public static final String PREFIX = "\u001B[37m[\u001B[90mRainB0\u001B[37m]\u001B[0m ";
     
     private ConfigManager configManager;
     private LanguageManager languageManager;
@@ -21,7 +21,7 @@ public final class B0rain extends JavaPlugin {
         languageManager = new LanguageManager(this, configManager);
         rainEffectManager = new RainEffectManager(this, configManager);
 
-        getCommand("b0rain").setExecutor(new B0rainCommand(this, configManager, languageManager));
+        getCommand("rainb0").setExecutor(new B0rainCommand(this, configManager, languageManager));
 
         rainEffectManager.start();
         

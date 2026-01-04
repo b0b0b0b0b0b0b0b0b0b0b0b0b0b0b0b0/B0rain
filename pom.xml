@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.black.minecraft</groupId>
-    <artifactId>b0rain</artifactId>
+    <artifactId>rainb0</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>b0rain</name>
+    <name>RainB0</name>
 
     <properties>
         <java.version>17</java.version>

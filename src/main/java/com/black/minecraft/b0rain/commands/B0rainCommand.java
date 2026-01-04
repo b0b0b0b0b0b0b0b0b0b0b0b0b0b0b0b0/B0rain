@@ -25,7 +25,7 @@ public class B0rainCommand implements CommandExecutor {
         }
 
         if (args[0].equalsIgnoreCase("reload")) {
-            if (!sender.hasPermission("b0rain.reload")) {
+            if (!sender.hasPermission("rainb0.reload")) {
                 sender.sendMessage(languageManager.getMessage("no-permission"));
                 return true;
             }
