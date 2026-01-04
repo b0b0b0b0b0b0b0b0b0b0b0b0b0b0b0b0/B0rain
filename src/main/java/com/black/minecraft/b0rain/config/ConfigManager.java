@@ -60,4 +60,12 @@ public class ConfigManager {
     public boolean isCheckUpdate() {
         return config.getBoolean("check-update", true);
     }
+
+    public boolean isBlockFireworks() {
+        return config.getBoolean("block-fireworks", false);
+    }
+
+    public boolean isBlockRiptide() {
+        return config.getBoolean("block-riptide", false);
+    }
 }

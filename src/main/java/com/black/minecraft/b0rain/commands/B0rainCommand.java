@@ -35,6 +35,8 @@ public class B0rainCommand implements CommandExecutor {
                 languageManager.loadLanguage();
                 plugin.getRainEffectManager().stop();
                 plugin.getRainEffectManager().start();
+                plugin.getElytraManager().stop();
+                plugin.getElytraManager().start();
                 sender.sendMessage(languageManager.getMessage("reload-success"));
             } catch (Exception e) {
                 sender.sendMessage(languageManager.getMessage("reload-error"));

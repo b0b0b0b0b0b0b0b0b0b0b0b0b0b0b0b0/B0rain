@@ -53,12 +53,7 @@ public class RainEffectManager {
                     }
 
                     UUID playerId = player.getUniqueId();
-                    boolean inRain = RainChecker.isInRain(
-                            player,
-                            configManager.isCheckThunder(),
-                            configManager.isCheckSnow(),
-                            configManager.getIgnoredBiomes()
-                    );
+                    boolean inRain = RainChecker.isInRain(player, configManager);
 
                     if (inRain) {
                         player.addPotionEffect(slownessEffect);

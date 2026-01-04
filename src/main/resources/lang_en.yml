@@ -2,3 +2,7 @@ messages:
   reload-success: "Configuration reloaded successfully!"
   reload-error: "Error reloading configuration!"
   no-permission: "You don't have permission to use this command!"
+  firework-rain-blocked: "The gunpowder got soaked in the rain and became damp! The firework won't ignite."
+  firework-snow-blocked: "The gunpowder froze in the cold and crystallized! The firework won't light up."
+  riptide-rain-blocked: "Riptide slips in wet hands and won't activate! Take shelter from the rain."
+  riptide-snow-blocked: "Riptide iced over in the snowfall and won't trigger! Find shelter."

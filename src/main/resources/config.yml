@@ -1,17 +1,86 @@
+# ===============================
+#       Plugin Settings
+# ===============================
+
+# Language selection for plugin messages
+# Possible values:
+#   "en" for English
+#   "ru" для Русского
 lang: en
+
+# Enable automatic version checking on plugin startup
+# The plugin will check for updates from the server and notify you in the console
+#    true = check for updates
+#    false = do not check
 check-update: true
 
+# ===============================
+#    Flight Blocking Settings
+# ===============================
+
+# Block firework rockets during rain
+# When enabled, players cannot use firework rockets to boost elytra flight during rain
+# The gunpowder gets wet and won't ignite
+#    true = block firework rockets in rain
+#    false = allow firework rockets
+block-fireworks: false
+
+# Block Riptide enchantment during rain
+# When enabled, players cannot use tridents with Riptide enchantment during rain
+#    true = block Riptide in rain
+#    false = allow Riptide
+block-riptide: false
+
+# ===============================
+#    Slowness Effect Settings
+# ===============================
+
+# How often the plugin checks if players are in rain (in ticks)
+# 20 ticks = 1 second
+# Recommended: 40 ticks (2 seconds)
 check-interval-ticks: 40
+
+# Slowness effect level applied to players in rain
+# 0 = Slowness I (90% speed)
+# 1 = Slowness II (80% speed)
+# 2 = Slowness III (70% speed)
 slowness-level: 0
+
+# Duration of slowness effect (in ticks)
+# 20 ticks = 1 second
+# Recommended: 80 ticks (4 seconds)
 slowness-duration-ticks: 80
+
+# Check for thunderstorm weather
+# When enabled, slowness effect will also apply during thunderstorms
+#    true = check thunderstorms
+#    false = only check regular rain
 check-thunder: true
+
+# Check for snow weather
+# When enabled, slowness effect will also apply during snow
+#    true = check snow
+#    false = only check rain
 check-snow: false
 
+# ===============================
+#    World Settings
+# ===============================
+
+# List of worlds where the plugin is active
+# If the list is empty, the plugin will work in all worlds
+# Add world names to enable the plugin only in specific worlds
+# Note: Nether and The End don't have rain/snow, so they are excluded by default
 enabled-worlds:
   - "world"
-  - "world_nether"
-  - "world_the_end"
 
+# ===============================
+#    Biome Settings
+# ===============================
+
+# List of biomes where rain effects are ignored
+# In these biomes, rain doesn't fall naturally, so effects won't apply
+# Biome names must be in format: "minecraft:biome_name"
 ignored-biomes:
   - "minecraft:desert"
   - "minecraft:desert_lakes"

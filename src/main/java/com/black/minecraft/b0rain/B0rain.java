@@ -3,6 +3,7 @@ package com.black.minecraft.b0rain;
 import com.black.minecraft.b0rain.commands.B0rainCommand;
 import com.black.minecraft.b0rain.config.ConfigManager;
 import com.black.minecraft.b0rain.config.LanguageManager;
+import com.black.minecraft.b0rain.elytra.ElytraManager;
 import com.black.minecraft.b0rain.rain.RainEffectManager;
 import com.black.minecraft.b0rain.utils.VersionChecker;
 import org.bukkit.Bukkit;
@@ -14,16 +15,19 @@ public final class B0rain extends JavaPlugin {
     private ConfigManager configManager;
     private LanguageManager languageManager;
     private RainEffectManager rainEffectManager;
+    private ElytraManager elytraManager;
 
     @Override
     public void onEnable() {
         configManager = new ConfigManager(this);
         languageManager = new LanguageManager(this, configManager);
         rainEffectManager = new RainEffectManager(this, configManager);
+        elytraManager = new ElytraManager(this, configManager, languageManager);
 
         getCommand("rainb0").setExecutor(new B0rainCommand(this, configManager, languageManager));
 
         rainEffectManager.start();
+        elytraManager.start();
         
         if (configManager.isCheckUpdate()) {
             Bukkit.getScheduler().runTaskLaterAsynchronously(this, () -> 
@@ -36,9 +40,16 @@ public final class B0rain extends JavaPlugin {
         if (rainEffectManager != null) {
             rainEffectManager.stop();
         }
+        if (elytraManager != null) {
+            elytraManager.stop();
+        }
     }
 
     public RainEffectManager getRainEffectManager() {
         return rainEffectManager;
+    }
+
+    public ElytraManager getElytraManager() {
+        return elytraManager;
     }
 }
