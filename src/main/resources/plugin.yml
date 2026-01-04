@@ -1,0 +1,16 @@
+name: B0rain
+version: '1.0'
+main: com.black.minecraft.b0rain.B0rain
+api-version: '1.18'
+authors: [ b0b0b0 ]
+website: https://black-minecraft.com/
+
+commands:
+  b0rain:
+    description: Main command for B0rain plugin
+    usage: /<command> reload
+
+permissions:
+  b0rain.reload:
+    description: Allows reloading B0rain configuration
+    default: op

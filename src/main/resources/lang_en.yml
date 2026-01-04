@@ -1,0 +1,4 @@
+messages:
+  reload-success: "Configuration reloaded successfully!"
+  reload-error: "Error reloading configuration!"
+  no-permission: "You don't have permission to use this command!"
